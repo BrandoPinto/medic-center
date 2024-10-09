@@ -99,10 +99,18 @@ h6,
     background: var(--primary);
     transform: skew(40deg);
 }
+.navbar {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.navbar-brand {
+    margin-right: auto; /* Asegura que el logo esté alineado a la izquierda */
+}
 
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Jost', sans-serif;
-    padding: 35px 15px;
+    padding: 25px 15px; /* Reducido desde 35px a 25px */
     font-size: 18px;
     color: var(--dark);
     outline: none;
@@ -110,20 +118,26 @@ h6,
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
-    padding: 20px 15px;
+    padding: 15px 15px; /* Reducido desde 20px a 15px */
+}
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 200px; /* Ajusta este valor según lo que necesites */
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Alinea el botón de hamburguesa a la derecha */
+    }
 }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
-}
 
 @media (max-width: 991.98px) {
     .navbar-light .navbar-nav .nav-link,
     .sticky-top.navbar-light .navbar-nav .nav-link {
-        padding: 10px 0;
+        padding: 10px 5px; /* Ajusta el padding aquí también */
+        font-size: 16px; /* Opcional: Ajustar el tamaño de la fuente */
     }
 }
+
 
 .carousel-caption {
     top: 0;
